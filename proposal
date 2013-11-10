@@ -1,0 +1,122 @@
+                                                                     
+                                                                     
+                                                                     
+                                             
+Title: Predicting Stock Market Performance through Financial Forum Sentiment 
+Analysis
+
+Group Members: 
+1) Peter Chen; peterlchen@fas.harvard.edu
+2) Pritam Dey pritamdey@fas.harvard.edu
+3) Molly Ma: sma01@g.harvard.edu
+4) Jaehyon Rhee: jrhee@fas.harvard.edu
+
+Background and Motivation:
+Financial markets are fascinating game to watch. In one hand, it's all about
+numbers and financials. But on the other hand, it's not so subjective since
+one can say it's largely driven by crowd psychology. And behavioral
+finance/economists folks have proved that people behave rather irrationally
+in financial markets. But these behavioral finance theories are not
+data driven. We like to take a data science approach in quantifying whether
+crowd psychology as expressed in positive/negative sentiments can be used
+as predictive or contrarian indicators. Some of team members have financial
+markets background and interests and the team is excited to test these ideas
+and see the results. Pluse project general objective has large general appeals
+since it's understandable and potentially enjoyed by all.
+
+Project Objectives:
+The main scientific and inferential goals are to see if crowd psychology
+as reflected in financial forums & potentially Twitter feeds are predictive
+or contratrian indicators of market performance. In the popular market 
+folklore, people say market is all about fear and greed, which are 
+based on crowd psychology. However, those are rather fuzzy definitions. 
+
+By approaching this question systematically through data analyses 
+and quantifying what this fear and greed sentiments, we hope to
+answer this question in a more scientific manner.
+
+Benefits include finally having a machine that give us buy/sell signals
+in the market, which is potentially lucrative or at least fun. Disclaimer
+is that this is just a data science project and does not constitute 
+investment advice. The more academic benefit is by using more rigorous
+and quantitative methods we hope to capture and explain a phenomenon
+that is discussed among market participants and have become folklore
+and myths. Fear and Greed. Has it been proven empirically? We will find out.
+
+Perhaps, we might find it's nothing. There's no real signal in the crowd
+psychology. That might be disappointing, but it will be an interesting to
+know definitively as well.
+
+Must-Have Features:
+The system must be able to scape web data(elitetrader.com, Yahoo Finance,
+and potentially Twitter). Clean it. And then start classifiying words
+or word pairs as positive or negative accurately. But we have to time
+index these sentiments and calculate percentage of positive/negative
+sentiments. Then compare against respective market performance over
+N days, where N is small.
+
+Optional Features:
+A nice optional feature include "real-time" forecast based on data
+scoured from the forums or Twitter feed. Another nice feature might
+include interactive viz on the website to look at historical performance
+of the predictions,etc.
+
+Another cool feature is perhaps use deep learning algorithms that was 
+recently released at nlp.stanford.edu/sentiment/ We don't think we will
+have time for that. Deep learning will be able to process an entire
+sentence rather than just keywords or pairs of keywords.
+
+What Data?
+Data will be obtained from Elitetrader.com and Yahoo Finance forums.
+Additional stock market prices & potentially macro news will be download 
+from Yahoo Finance as well. We will build web scrapers to scrape and catalog
+online forum postings. We'll need to do a lot of preprocessing before 
+using that as the training set for our models.
+
+To make the project's scope more manageable, we will concentrate on market
+index(i.e. S&P 500, Dow 30,etc.) instead of individual stocks. Moreso, we
+will focus on a few instruments that has considerable discussion in popular
+forums such as gold and oil. So, at most, we will be tracking 2 indices and 2
+popular instruments in discussion instead of tracking tons of random stock 
+symbols on these retail trading forums.
+
+Design Overview:
+The project will follow standard data science procedures. Data extraction &
+cleansing, then modeling, then viz. There are several sites with good
+word list and sentiments such as SentiWordNet and others. 
+We will use Naive Bayesian model with both single keywords and 
+perhaps even use word pairs(hopefully it's not too sparse). In addition, 
+we can also use SVM to train the model on which words
+will be positive, negative, or netural for market. We will use
+
+Verification:
+This will be done by comparing sentiment indicator with actual market 
+performance. That is if a tweet or forum "positive" sentiment lead to
+positive return(this is directly predictive), but if it leads to negative
+returns then it's a contrarian indicator. We can look over 1,2,3,..N day
+horizon to calculate returns. We will need to calculate the accuracy of
+our models. What percentage of time does it accurate predict future
+market returns? Consistently predicting the wrong way means that sentiment
+is a contrarian indicator. Consistently predicting the right direction
+would be a predictive indicator.
+
+We are not trying to predict ACTUAL magnitutde of returns(positive 
+or negative). Just the direction(up or down) using sentiments. 
+Anything above 50% would be better than random guessing market direction.
+
+Visualization & Presentation:
+The results will be visualized and broken down by comparing the two
+market indices and sentiment prediction of the direction within N days,
+where N is small. The same for gold and oil prices. These will be
+standard line graphs. We can also visualize the bag of words or keywords
+that seem to be most predictive or contrarian.
+
+However, we are still exploring other 
+ways to make the results more appealing and interactive.
+
+Schedule:
+Week1: Data Extraction from Elitetrader.com & Yahoo Finance, data cleanup
+Week1 & Week2: Pass partial data set to modelling team; Week2 is focus on
+training the model and making predictions from it
+Week3: Build website and continue to collect data and refine model
+Week4: Work on data visualization, presentation, and website
